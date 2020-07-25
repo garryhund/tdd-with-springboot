@@ -1,5 +1,6 @@
-package com.essContext;
+package com.essContext.user;
 
+import com.essContext.BaseTest;
 import com.essContext.controller.request.LegalPersonRequest;
 import com.essContext.domain.service.LegalPersonService;
 import org.junit.jupiter.api.DisplayName;
@@ -9,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class RegisterTest extends BaseTest {
+public class ServiceTest extends BaseTest {
 
     @Autowired
     LegalPersonService legalPersonService;

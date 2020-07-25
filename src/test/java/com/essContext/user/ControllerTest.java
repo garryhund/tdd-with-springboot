@@ -7,8 +7,10 @@ import org.junit.jupiter.api.Test;
 import static com.essContext.BaseRequestBody.body;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class LegalPersonTest extends BaseTest {
+public class ControllerTest extends BaseTest {
     @Test
     @DisplayName("正常注册流程")
     void should_return_success_given_legalPersonInfo_when_register() {
