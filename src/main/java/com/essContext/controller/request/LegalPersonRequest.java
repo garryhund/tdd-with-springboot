@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
+import javax.validation.constraints.NotBlank;
+
 /**
 * @ClassName: LegalPersonRequest
 * @Description: 
@@ -16,16 +18,20 @@ import lombok.NonNull;
 public class LegalPersonRequest {
     @NonNull
     private String type;
+
     @NonNull
     private String companyName;
+
     @NonNull
     private String companyCode;
-    @NonNull
+
+    @NotBlank(message = "法定代表人姓名不能为空")
     private String name;
+
     @NonNull
     private String idType;
+
     @NonNull
     private String idCode;
-
 }
 

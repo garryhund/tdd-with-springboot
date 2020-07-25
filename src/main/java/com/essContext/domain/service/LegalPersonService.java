@@ -11,7 +11,16 @@ public class LegalPersonService {
     @Autowired
     LegalPersonRepository legalPersonRepository;
 
-    public LegalPerson register(LegalPersonRequest request) throws Exception {
+
+    /**
+    * 注册
+    * @param
+    * @return
+    * @throws
+    * @author liyan
+    * @time 2020/7/25 14:33
+    */
+    public LegalPerson register(LegalPersonRequest request) {
         LegalPerson legalPerson = LegalPerson.builder()
                 .type(request.getType())
                 .companyName(request.getCompanyName())

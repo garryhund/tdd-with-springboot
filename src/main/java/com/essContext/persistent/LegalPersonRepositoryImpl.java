@@ -2,6 +2,7 @@ package com.essContext.persistent;
 
 import com.essContext.domain.model.LegalPerson;
 import com.essContext.domain.repository.LegalPersonRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -18,5 +19,4 @@ public class LegalPersonRepositoryImpl implements LegalPersonRepository{
         legalPersonList.add(legalPerson);
         return legalPerson;
     }
-    // test push
 }
