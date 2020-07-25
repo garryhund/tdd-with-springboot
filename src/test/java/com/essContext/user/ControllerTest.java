@@ -42,8 +42,7 @@ public class ControllerTest extends BaseTest {
                         .build())
                 .when().post("/api/legalPerson/register")
                 .then().log().body()
-                .body("type", equalTo("1"))
-                .statusCode(200);
+                .body("type", equalTo("1"));
     }
 
     @Test
