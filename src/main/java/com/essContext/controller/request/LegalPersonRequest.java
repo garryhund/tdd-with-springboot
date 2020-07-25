@@ -16,22 +16,23 @@ import javax.validation.constraints.NotBlank;
 @Data
 @NoArgsConstructor
 public class LegalPersonRequest {
-    @NonNull
+
+    @NotBlank(message = "法人类型不能为空")
     private String type;
 
-    @NonNull
+    @NotBlank(message = "公司名称不能为空")
     private String companyName;
 
-    @NonNull
+    @NotBlank(message = "统一信用代码不能为空")
     private String companyCode;
 
     @NotBlank(message = "法定代表人姓名不能为空")
     private String name;
 
-    @NonNull
+    @NotBlank(message = "证件类型不能为空")
     private String idType;
 
-    @NonNull
+    @NotBlank(message = "证件号码不能为空")
     private String idCode;
 }
 

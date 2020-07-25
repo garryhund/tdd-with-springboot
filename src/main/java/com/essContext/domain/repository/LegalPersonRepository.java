@@ -19,5 +19,7 @@ public interface LegalPersonRepository {
     * @author liyan
     * @time 2020/7/25 10:33
     */ 
-    LegalPerson save(LegalPerson legalPerson);
+    String save(LegalPerson legalPerson);
+
+
 }

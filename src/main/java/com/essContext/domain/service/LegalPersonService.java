@@ -20,7 +20,9 @@ public class LegalPersonService {
     * @author liyan
     * @time 2020/7/25 14:33
     */
-    public LegalPerson register(LegalPersonRequest request) {
+    public String register(LegalPersonRequest request) {
+
+        // 1. 构建法人对象
         LegalPerson legalPerson = LegalPerson.builder()
                 .type(request.getType())
                 .companyName(request.getCompanyName())
@@ -29,6 +31,16 @@ public class LegalPersonService {
                 .idType(request.getIdType())
                 .idCode(request.getIdCode())
                 .build();
-        return legalPersonRepository.save(legalPerson);
+
+        // 2. 工商核验法人信息
+
+
+        // 3. 保存用户信息
+        String userId = legalPersonRepository.save(legalPerson);
+
+        // 4. 异步循环处理同步国家平台
+
+        // 5. 返回应答
+        return userId;
     }
 }
