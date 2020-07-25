@@ -32,4 +32,10 @@
 
 #### 任务拆分
 - Given 合法的注册信息 When 注册 Then 注册成功
-- Given 
+- Given 合法的注册信息但已存在 When 注册 Then 注册失败
+- Given 企业名称不合法 When 注册 Then 注册失败
+- Given 统一信用代码不合法 When 注册 Then 注册失败
+- Given 统一信用代码与企业名称不匹配 When 注册 Then 注册失败
+- Given 法人姓名不合法 When 注册 Then 注册失败
+- Given 证件号码不合法 When 注册 Then 注册失败
+- Given 证件号码与法人姓名不匹配 When 注册 Then 注册失败

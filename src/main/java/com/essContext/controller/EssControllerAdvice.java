@@ -13,7 +13,7 @@ public class EssControllerAdvice {
     @ResponseBody
     @ExceptionHandler
     public Map errorHandler(Exception ex) {
-        Map map = new HashMap();
+        Map map = new HashMap(2);
         map.put("code", 99999);
         map.put("message", ex.getMessage());
         return map;

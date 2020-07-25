@@ -18,4 +18,5 @@ public class LegalPersonRepositoryImpl implements LegalPersonRepository{
         legalPersonList.add(legalPerson);
         return legalPerson;
     }
+    // test push
 }
